@@ -1,0 +1,41 @@
+{# templates/registration/register.html.twig #}
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <h2 class="w3-wide">REGISTER</h2>
+    <p class="w3-opacity"><i>We love music</i></p>
+    <p class="w3-justify">
+        We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip
+    </p>
+
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col-lg-4">
+            {{ form_row(form.username) }}
+        </div>
+        <div class="col-lg-4">
+            {{ form_row(form.email) }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            {{ form_row(form.plainPassword.first) }}
+        </div>
+        <div class="col-lg-4">
+            {{ form_row(form.plainPassword.second) }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <button type="submit">Register!</button>
+        </div>
+    </div>
+    
+    {{ form_end(form) }}
+{% endblock %}
